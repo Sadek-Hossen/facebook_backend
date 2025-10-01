@@ -1,8 +1,9 @@
 import express from 'express'
-import  {postCreater}  from '../controller/post.controller.js'
+import  {getAllPosts, postCreater}  from '../controller/post.controller.js'
 const router = express.Router()
 
 // Routers
 router.post("/postCreate",postCreater)
+router.get("/",getAllPosts)
 
 export default router
