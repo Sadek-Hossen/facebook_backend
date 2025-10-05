@@ -3,10 +3,9 @@ import Post from "../model/post.model.js";
 // post create
 export const postCreater = async (req, res) => {
   try {
-    const { title, image } = req.body;
-    console.log(title, image);
 
-    const post = await Post.create({ title, image });
+
+    const post = await Post.create(req.body);
 
 
     return res.status(201).json({
