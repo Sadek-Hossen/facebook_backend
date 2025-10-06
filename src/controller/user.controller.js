@@ -28,3 +28,17 @@ export const  createUser = async (req,res)=>{
  }
 
 }
+
+export const getAllUsr = async (req,res)=>{
+    try {
+        
+        const user = await User.find()
+        res.status(201).json({
+            message:"user getting",
+            user
+        })
+
+    } catch (error) {
+        
+    }
+}
